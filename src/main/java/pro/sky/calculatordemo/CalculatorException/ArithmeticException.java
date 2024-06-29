@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class ArithmeticException extends IllegalArgumentException {
 
-    public ArithmeticException() {
-        super("Division by zero");
+    public ArithmeticException(String s) {
+        super("Devide by zero");
     }
 }

@@ -11,7 +11,6 @@ import pro.sky.calculatordemo.CalculatorService.CalculatorService;
 @RequestMapping("/calculator")
 public class CalculatorController {
 
-
     private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService) {
@@ -24,22 +23,22 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String calculatePlus(@RequestParam ("num5") Integer a, @RequestParam("num5") Integer b) {
+    public String calculatePlus(@RequestParam ("num1") Integer a, @RequestParam("num2") Integer b) {
         return a + " + " + b + " = " + calculatorService.sum(a, b);
     }
 
     @GetMapping("/minus")
-    public String calculateMinus(@RequestParam ("num5") Integer a, @RequestParam("num5") Integer b) {
+    public String calculateMinus(@RequestParam ("num1") Integer a, @RequestParam("num2") Integer b) {
         return a + " - " + b + " = " + calculatorService.subtract(a, b);
     }
 
     @GetMapping("/multiply")
-    public String calculateMultiply(@RequestParam ("num5") Integer a, @RequestParam("num5") Integer b) {
+    public String calculateMultiply(@RequestParam ("num1") Integer a, @RequestParam("num2") Integer b) {
         return a + " * " + b + " = " + calculatorService.multiply(a, b);
     }
 
     @GetMapping("/divide")
-    public String calculateDivide(@RequestParam ("num5") Integer a, @RequestParam("num5") Integer b) {
+    public String calculateDivide(@RequestParam ("num1") Integer a, @RequestParam("num2") Integer b) {
         return a + " / " + b + " = " + calculatorService.divide(a, b);
     }
 }
